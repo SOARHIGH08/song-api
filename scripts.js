@@ -160,7 +160,6 @@ async function fetchAlbum() {
 
     albumsContainer.innerHTML = "";
 
-    // Access the album data from albumsData
     const albums = albumsData.data.artist.discography.albums.items;
 
     const albumNames = albums
@@ -172,8 +171,6 @@ async function fetchAlbum() {
         const image = item.coverArt.sources[0].url;
         return { name, url, image };
       });
-
-    console.log(albumNames);
 
     albumNames.forEach((album) => {
       const albumElement = document.createElement("div");
@@ -194,8 +191,6 @@ async function fetchAlbum() {
     console.error(error);
   }
 }
-
-//
 
 // ARTIST
 async function fetchArtist() {
