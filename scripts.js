@@ -155,6 +155,8 @@ async function fetchAlbum() {
 
   try {
     const response = await fetch(url, options);
+    const result = await response.text();
+    const albumsData = JSON.parse(result);
 
     albumsContainer.innerHTML = "";
 
