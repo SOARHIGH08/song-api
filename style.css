@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Open Sans", sans-serif;
+}
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+::-webkit-scrollbar {
+  height: 15px;
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #a5cfff;
+  box-shadow: inset 0 0 5px #ffffff9d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #022750a2;
+  border-radius: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://images.hdqwalls.com/wallpapers/wave-colour-abstract-4k-ow.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.player-container {
+  background-color: rgba(255, 255, 255, 0.548);
+  width: 250px;
+  height: 400px;
+  backdrop-filter: blur(10px) brightness(100%);
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px #000000a8;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 350px;
+  padding: 13px;
+}
+.album-pic {
+  display: flex;
+  align-items: center;
+  height: 130px;
+  width: 200px;
+  margin: 10px;
+  position: relative;
+}
+.pic1 {
+  height: 130px;
+  width: 130px;
+  background-image: url(https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2021%2F11%2F11%2FTaylor-Swift-Red.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.pic2 {
+  background-image: url(https://www.graphicsfuel.com/wp-content/uploads/2012/01/vinyl-record-disc-512.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  top: 5px;
+  right: 25px;
+}
+.label {
+  text-align: center;
+}
+.title {
+  font-family: "Open Sans", sans-serif;
+}
+.singer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.playtime-container {
+  width: 100%;
+}
+.time {
+  display: flex;
+  justify-content: space-between;
+}
+.time p {
+  font-size: 11px;
+}
+.seek-bar-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.seek_slider {
+  width: 100%;
+  height: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.301);
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 20px;
+}
+i {
+  color: #1d60ac;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.247);
+}
+i:hover {
+  color: #144f92;
+}
+i:active {
+  color: #144f92;
+}
+.animate {
+  animation: scaleAnimation 0.5s ease;
+}
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.lyrics-panel {
+  margin-inline: 20px;
+  border-radius: 10px;
+}
+.lyrics-panel h3 {
+  margin-left: 10px;
+  color: rgb(190, 184, 214);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+}
+.tabs-container {
+  display: flex;
+  margin: 10px;
+}
+.tabs {
+  margin-right: 35px;
+}
+.tab-button {
+  border: none;
+  background-color: transparent;
+  color: rgba(240, 227, 227, 0.664);
+}
+.tab-button:hover {
+  color: rgba(216, 196, 196, 0.664);
+}
+.tab-button[disabled],
+.tab-button[disabled]:hover {
+  color: rgb(247, 235, 235);
+  font-weight: 400;
+}
+.api-container {
+  background-color: #0000007e;
+  border-radius: 20px;
+  backdrop-filter: blur(13px) brightness(100%);
+  border: 10px solid #ffffff01;
+  width: 500px;
+}
+.lyrics,
+.albums,
+.artist {
+  height: 280px;
+  overflow: auto;
+  padding: 15px 30px;
+  color: white;
+}
+.albums,
+.artist {
+  display: flex;
+
+  overflow-x: auto;
+}
+.lyrics h3,
+.lyrics p,
+.lyrics a,
+.albums h3,
+.artist h3 {
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 300;
+}
+.album-cards {
+  display: flex;
+}
+.album-card {
+  margin: 20px;
+}
+.album-card p {
+  font-size: 10px;
+}
+.album-card img {
+  width: 180px;
+}
+.artist-container,
+.album-container {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.123);
+  margin: 5px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.377);
+}
+.artist-container img,
+.album-container img {
+  width: 150px;
+}
+.artist-name {
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  margin-top: 22px;
+}
+.hide {
+  display: none;
+}

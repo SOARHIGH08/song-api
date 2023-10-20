@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <title>KODEGO EXAM</title>
+  </head>
+  <body>
+    <main>
+      <div class="player-container">
+        <div class="container">
+          <div class="album-pic">
+            <div class="pic1"></div>
+            <div class="pic2"></div>
+          </div>
+          <div class="label">
+            <h5 class="title">All Too Well (Taylor's Version)</h5>
+            <p class="singer">Taylor Swift</p>
+          </div>
+
+          <audio id="audioPlayer"></audio>
+
+          <div class="playtime-container">
+            <div class="time">
+              <p id="current-time">0:00</p>
+              <p id="total-time">10:13</p>
+            </div>
+            <div class="seek-bar-container">
+              <input
+                type="range"
+                min="1"
+                value="0"
+                class="seek_slider"
+                id="seek-bar"
+                onchange="seekTo(this.value)"
+              />
+            </div>
+
+            <div class="button-container">
+              <div class="prev-track">
+                <i class="fa fa-step-backward fa-2x"></i>
+              </div>
+              <div class="playpause-track">
+                <div id="playBtn">
+                  <i class="fa fa-play-circle fa-4x"></i>
+                </div>
+                <div id="stopBtn">
+                  <i class="fas fa-pause-circle fa-4x"></i>
+                </div>
+              </div>
+              <div class="next-track">
+                <i class="fa fa-step-forward fa-2x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lyrics-panel">
+        <h3>Explore</h3>
+        <div class="tabs-container">
+          <div class="tabs">
+            <button class="tab-button" id="lyrics-btn">Lyrics</button>
+          </div>
+          <div class="tabs">
+            <button class="tab-button" id="albums-btn">Other Albums</button>
+          </div>
+          <div class="tabs">
+            <button class="tab-button" id="artist-btn">Related Artists</button>
+          </div>
+        </div>
+        <div class="api-container">
+          <div id="lyrics" class="lyrics">
+            <!-- Lyrics will be displayed here -->
+          </div>
+          <div id="albums" class="albums">
+            <!-- Lyrics will be displayed here -->
+          </div>
+          <div id="artist" class="artist">
+            <!-- Lyrics will be displayed here -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="scripts.js"></script>
+</html>
